@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 256px;
+  height: 224px;
+  background-color: black;
+}
+span.main-ship {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #33ff00;
+  position: absolute;
+  top: 200px;
+  left: 0px;
+}
+span.bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 0, 0);
+  position: absolute;
+}
+span.enemy {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+}
