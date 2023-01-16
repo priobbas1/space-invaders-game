@@ -7,7 +7,7 @@ html {
   height: 224px;
   background-color: black;
 }
-span.main-ship {
+div.main-ship {
   width: 10px;
   height: 10px;
   display: inline-block;
