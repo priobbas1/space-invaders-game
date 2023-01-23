@@ -23,7 +23,7 @@ for (let i = 0; i <= 4; i++) {
   }
   enemies.push(enemiesRow);
 }
-
+let keyUpShooting = true;
 let currentPositionMainShip = mainShip?.style.left.slice(0, 3);
 //movement of main ship
 addEventListener("keydown", (event) => {
@@ -40,10 +40,16 @@ addEventListener("keydown", (event) => {
   }
 });
 
+addEventListener("keyup", (event) => {
+  if (event.key === " " || event.key === "ArrowUp") {
+    keyUpShooting = true;
+  }
+});
+
 let shootAvaliable = true;
 //shooting function
 function shoot() {
-  if (shootAvaliable) {
+  if (shootAvaliable && keyUpShooting) {
     const newSpan = document.createElement("span");
     newSpan.className = "bullet";
     document.body.insertBefore(newSpan, null);
@@ -51,6 +57,7 @@ function shoot() {
     newSpan.style.left = `${parseInt(mainShip.style.left.slice(0, 3), 10)}px`;
     bullets.push(newSpan);
     shootAvaliable = false;
+    keyUpShooting = false;
   }
 }
 
